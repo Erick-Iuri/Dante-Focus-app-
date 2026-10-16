@@ -1,10 +1,12 @@
-import Image from "next/image";
+import Navbar from "@/components/navbar";
+import Animation from "@/components/animation";
 
 export default function Home() {
   return (
-    <div className="text-foreground bg-background flex justify-center">
-      <div className="text-lg">Dante nada ainda</div>
-      <div>teste 02</div>
+    <div className="flex justify-center">
+      <Animation />
+
+      <Navbar />
     </div>
   );
 }
