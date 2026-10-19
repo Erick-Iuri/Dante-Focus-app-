@@ -20,7 +20,7 @@ export default function Navbar() {
         {/* Item 02 */}
         <div className="flex items-center justify-center gap-8">
           <button className="relative cursor-pointer group p-0.5 rounded-full bg-linear-to-r from-[#8A2AE3] to-[#3AD5B7] transition-all duration-300 hover:shadow-[0_0_20px_rgba(138,42,227,0.4)] active:scale-95">
-            <span className="block px-10 py-2 rounded-full bg-slate-950 text-white font-medium transition-all duration-300 group-hover:bg-transparent">
+            <span className="block px-10 py-2 rounded-full bg-background text-white font-medium transition-all duration-300 group-hover:bg-transparent">
               Ir para o painel
             </span>
           </button>

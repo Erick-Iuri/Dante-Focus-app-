@@ -1,5 +1,6 @@
 import Navbar from "@/components/navbar";
 import Animation from "@/components/animation";
+import Start from "@/components/start";
 
 export default function Home() {
   return (
@@ -7,6 +8,8 @@ export default function Home() {
       <Animation />
 
       <Navbar />
+
+      <Start />
     </div>
   );
 }
