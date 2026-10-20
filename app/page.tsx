@@ -1,23 +1,26 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 import Navbar from "@/components/navbar";
 import Animation from "@/components/animation";
 import Start from "@/components/start";
+import Question from "@/components/question";
 
 export default function Home() {
+  const [mostrarConfig, setMostrarConfig] = useState(false);
+
   return (
     <div className="max-w-360 mx-auto px-4 w-full">
       <Animation />
 
       <Navbar />
 
-      <Start />
+      {!mostrarConfig ? <Start configTimer={() => setMostrarConfig(true)}/> : <Question />}
 
       <footer className="fixed bottom-0 left-0 w-full">
-        <div
-          className="flex justify-center items-center gap-2 p-4"
-        >
+        <div className="flex justify-center items-center gap-2 p-4">
           <Link
             href="https://github.com/Erick-Iuri/dante"
             target="_blank"

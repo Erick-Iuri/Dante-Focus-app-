@@ -1,7 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Start() {
+interface CardTimerProps {
+  configTimer: () => void
+}
+
+export default function Start({ configTimer }: CardTimerProps) {
   return (
     <div className="flex items-center justify-center p-10 fixed inset-0 pointer-events-none">
       <div className="flex justify-center flex-col items-center gap-20 pointer-events-auto">
@@ -29,7 +33,9 @@ export default function Start() {
               height={300}
               className="w-15"
             />
-            <div className="flex justify-center items-center gap-5
+            <div 
+            onClick={() => configTimer()}
+            className="flex justify-center items-center gap-5
             text-white font-medium italic rounded-full 
             text-lg px-5 py-2 bg-[#42424F] cursor-pointer">
               <span>Começar</span>
