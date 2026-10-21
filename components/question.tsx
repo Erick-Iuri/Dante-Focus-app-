@@ -11,6 +11,7 @@ export default function Question() {
     <div className="p-10">
       <p>Tarefa</p>
 
+      {/* Conteúdo */}
       <div className="max-w-250 mx-auto w-full pt-10">
         {/* Aqui é a pergunta! */}
         <div className="flex flex-col gap-5">
@@ -149,9 +150,10 @@ export default function Question() {
         <div className="flex justify-end">
           <button
             onClick={() => setIsOpen(true)}
-            className="bg-[#8A2AE3] px-7 py-3 rounded-full 
-          cursor-pointer hover:bg-[#3AD5B7] active:bg-[#191970]
-          transition-all duration-300"
+            className="px-7 py-3 rounded-full cursor-pointer
+            bg-linear-to-r from-[#8A2AE3] to-[#3AD5B7] 
+            transition-all duration-300 hover:shadow-[0_0_20px_rgba(138,42,227,0.4)] 
+           active:scale-95"
           >
             Iniciar Foco
           </button>
@@ -211,18 +213,12 @@ export default function Question() {
                 </button>
 
                 <button
-                  className="relative cursor-pointer group p-0.5 
-                  rounded-full bg-linear-to-r from-[#3AD5B7] to-[#3AD5B7] 
-                  transition-all duration-300
+                  className="px-7 py-2 rounded-full cursor-pointer
+                  bg-linear-to-r from-[#8A2AE3] to-[#3AD5B7] 
+                  transition-all duration-300)] 
                   active:scale-95"
                 >
-                  <span
-                    className="block px-10 py-2 rounded-full
-                  text-white font-medium 
-                   transition-all duration-300 group-hover:bg-transparent"
-                  >
-                    Começar Foco
-                  </span>
+                  Iniciar
                 </button>
               </div>
             </div>

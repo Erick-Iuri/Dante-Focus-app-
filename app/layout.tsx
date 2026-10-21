@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Lora } from "next/font/google";
+import { Lora, Google_Sans_Flex } from "next/font/google";
 import "./globals.css";
 
 const lora = Lora({
@@ -7,6 +7,12 @@ const lora = Lora({
   weight: ["400", "500", "600", "700"],
   variable: "--font-lora-custom",
 });
+
+const googleSansFlex = Google_Sans_Flex({
+  subsets: ['latin'],
+  weight: ["100", "200", "300", "400"],
+  variable: '--font-google-sans',
+})
 
 export const metadata: Metadata = {
   title: "Focus app - Dante",
@@ -18,6 +24,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="pt" className={`h-full antialiased`}>
       <body
         className={`${lora.className} 
+        ${googleSansFlex.className}
         min-h-full 
         flex flex-col 
         bg-background 

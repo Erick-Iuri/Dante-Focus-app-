@@ -2,8 +2,8 @@ import Navbar from "@/components/navbar";
 
 export default function Dashboard() {
   return (
-    <div className="flex justify-center">
-      <p>Esse é o dashboard!</p>
+    <div className="max-w-360 mx-auto px-4 w-full">
+      <Navbar />
     </div>
   );
 }
